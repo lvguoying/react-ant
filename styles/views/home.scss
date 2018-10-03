@@ -1,0 +1,194 @@
+.homePage{
+    min-width: 800px;
+    @media all and (max-width:1000px){/* 宽度小于1000 */
+	    .homePage_bottom{
+            display: block !important;
+            overflow: auto;
+            .homePage_bottom_left{
+                width: 100%;
+                height: auto;
+                max-height: 450px;
+            }
+            .homePage_bottom_right{
+                width: 100%;
+                height: 600px !important;
+                min-height: 350px;
+                padding: 15px 0 0 0 !important;
+            }
+        }
+	}
+    .homePage_top{
+        display: flex;
+        height: 75px;
+        padding: 15px 25px 15px 50px;
+        position: relative;
+        .user{
+            flex: 0 0 auto;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            font-size: 15px;
+        }
+        .img{
+            flex: 0 0 45px;
+            height: 45px;
+            margin: 2px 15px 0 0;
+            border-radius: 50%;
+        }
+        h1{
+            flex: 1;
+            line-height: 45px;
+            height: 45px;
+            margin: 0 15px;
+            font-size: 20px;
+        }
+        .line{
+            flex: 0 0 1px;
+            background: #ddd;
+            margin: 7px 0;
+        }
+        .titBox{
+            flex: 0 0 auto;
+            text-align: right;
+            padding: 0 25px;
+            .min{
+                font-size:13px;
+                color: #adb0b1;
+            }
+            .max{
+                font-size: 22px;
+                color: #000;
+            }
+        }
+    }
+    .homePage_bottom{
+        background:#f0f2f5;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        padding: 15px;
+        min-height: 600px;
+        .homePage_bottom_left{
+            background: #fff;
+            flex: 0 0 50%;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        .homePage_bottom_right{
+            flex: 0 0 50%;
+            padding: 0 0 0 15px;
+            height: 100%;
+            .topBox{
+                padding: 0 0 15px 0;
+            }
+            .topBox,.bottomBox{
+                width: 100%;
+                height: 50%;
+                float: left;
+            }
+            .box{
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+                background: #fff;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+            }
+        }
+    }
+    .tit_row{
+        border-bottom: 1px solid #f1f1f1;
+        padding: 10px 15px;
+        flex: 0 0 auto;
+        .label{
+            color: #000;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline;
+        }
+        i{
+            margin: 0 0 0 10px;
+            cursor: pointer;
+        }
+        i:hover{
+            color: #5e68c4;
+        }
+        .ant-radio-group{
+            float: right;
+        }
+    }
+    .dy_row_box{
+        flex: 1;
+        overflow: auto;
+        padding: 15px;
+        position: relative;
+    }
+    .dy_row{
+        border-bottom: 1px solid #eee;
+        display: flex;
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 0 0 15px 0;
+        .user{
+            flex: 0 0 auto;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin: 2px 15px 0 0;
+        }
+        .img{
+            flex: 0 0 40px;
+            height: 40px;
+            margin: 2px 15px 0 0;
+        }
+        .cont{
+            flex: 1;
+            .dyText{
+                font-weight: bold;
+                color: #000;
+                font-size: 13px;
+                span{
+                    color: #1890ff;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    .cont_box{
+        flex: 1;
+        position: relative;
+        display: flex;
+        .div{
+            flex:0 0 50%; 
+        }
+        .li{
+            display: flex;
+            padding: 0 0 3px 0;
+            .dian{
+                width: 10px;
+                height: 10px;
+                flex: 0 0 auto;
+                border-radius: 50%;
+                margin: 6px 8px 0 0;
+            }
+            .charType{
+                flex: 0 0 auto;
+            }
+            .baifenbi{
+                flex: 0 0 50px;
+                margin: 0 25px;
+            }
+            .dataVal{
+                flex: 0 0 auto;
+                b{
+
+                }
+            }
+        }
+    }
+}

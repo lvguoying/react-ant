@@ -1,0 +1,22 @@
+.userTag{
+    width: 100%;
+    .ant-tag{
+        float: left;
+        position: relative;
+        padding: 0 20px;
+        svg{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: -7px;
+            right: 2px;
+            cursor: pointer;
+        }
+    }
+    .add{
+        height: 22px;
+        font-size: 12px;
+        line-height: 21px;
+        float: left;
+    }
+}

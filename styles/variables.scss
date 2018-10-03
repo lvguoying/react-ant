@@ -1,0 +1,17 @@
+$baseFontSize: 19.2;                          // 基于视觉稿横屏尺寸/100得出的基准font-size
+
+@function px2rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+
+@function rem4($px1,$px2,$px3,$px4) {
+  @return unquote( $px1 / $baseFontSize * 1rem + ' ' + $px2 / $baseFontSize * 1rem + ' ' + $px3 / $baseFontSize * 1rem + ' ' + $px4 / $baseFontSize * 1rem );
+}
+
+@function rem2($px1,$px2) {
+  @return unquote( $px1 / $baseFontSize * 1rem + ' ' + $px2 / $baseFontSize * 1rem );
+}
+
+@function remflex($px1,$px2,$px3) {
+    @return unquote( $px1 + ' ' + $px2 + ' ' + $px3 / $baseFontSize * 1rem );
+}

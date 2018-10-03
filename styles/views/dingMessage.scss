@@ -1,0 +1,35 @@
+.dingmessage{
+    width: 100%;
+    height: 100%;
+    .taskDetails .switch .buttons .ant-btn{
+        width: 135px;
+    }
+    @media all and (max-width:400px){
+        .bottomDetail>li{
+            width: 100% !important;
+        }
+        .taskDetails .switch .buttons .ant-btn{
+            width: 30% !important;
+            position: relative;
+            >span:nth-child(2){
+                position: absolute;
+                background: #dedcdc;
+                display: block;
+                top: -9px;
+                right: 4px;
+                width: auto;
+                height: 16px;
+                line-height: 16px;
+                color: #fff;
+                border-radius: 15px;
+                padding: 0 5px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+body{
+    min-width: auto !important;
+    min-height: auto !important;
+}

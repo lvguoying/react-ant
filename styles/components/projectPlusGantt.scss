@@ -1,0 +1,147 @@
+.projectPlusGanttBox{
+    padding: 10px;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    .ant-spin-spinning{
+        position: absolute;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;    
+    }
+    .projectPlusGantt{
+        background: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .top{
+            padding: 0 0 7px 0;
+            display:flex;
+            .RadioGroup{
+                flex:0 0 auto;
+                display: flex;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                width: 130px;
+                label{
+                    flex: 1;
+                    text-align: center;
+                    cursor: pointer;
+                    border-right: 1px solid #eee; 
+                }
+                label:hover{
+                    background: #eee;
+                }
+                label:first-child{
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+                label:last-child{
+                    border-right: 0;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+                .act{
+                    background-color: #108ee9;
+                    color: #fff;
+                }
+            }
+            .topIcon{
+                padding:0 10px;
+                position: relative;
+                i{
+                    position: absolute;
+                    top:5px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .bottom{
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            .mini-supergrid-cell{
+                line-height: 30px;
+            }
+        }
+    }
+}
+.taskState{
+    max-width:320px;
+    h3{
+        font-size:16px;
+        color:#454545;
+    }
+    ul{
+        margin:0;
+        padding:0;
+        li{
+            width:105px;
+            display:inline-block;
+            padding:5px 0;
+            span{
+                display:inline-block;
+                width:12px;
+                height:12px;
+                margin-right:5px;
+                margin-bottom:-2px;
+            }
+            font{
+                font-size:12px;
+                color:#454545;
+            }
+        }
+        li:last-child{
+            span{
+                transform: rotateZ(45deg);
+            }
+        }
+    }
+    .childTask{
+        display:flex;
+        align-items: center;
+        .colorSquare{
+            width:150px;
+            height:8px;
+            background:#999;
+            display:inline-block;
+            position: relative;
+            margin-right:5px;
+            .left{
+                display:inline-block;
+                width:0;
+                border:8px solid #999;
+                border-top-color:transparent;
+                border-right-color:transparent;
+                border-bottom-color:transparent;
+            }
+            .right{
+                display:inline-block;
+                width:0;
+                border:8px solid #999;
+                border-top-color:transparent;
+                border-left-color:transparent;
+                border-bottom-color:transparent;
+                position: absolute;
+                right:0;
+            }
+        }
+        span{
+            font-size:12px;
+            color:#454545;
+            padding-top:4px;
+        }
+    }
+}

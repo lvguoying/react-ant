@@ -1,0 +1,389 @@
+.ant-layout {
+    width: 100%;
+    height: 100%;
+    position: relative;    
+    .ant-layout-content {
+      @media all and (max-width:1250px){     /* 宽度小于1000 */
+        .left_menu {
+          display: none;
+        }
+        .contBox {
+          left: 0 !important;
+        }     
+      } 
+      .taskDetailBox{
+        position: fixed;
+        z-index: 50;
+        width: 45%;
+        top: 65px;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        box-shadow: 0 0 5px #c9c9c9;
+        border-left: 1px solid #ddd;    
+        min-width: 600px;   
+      }
+      .left_menu {
+        width: 250px;
+        background: #fff;
+        height: 100%;
+        box-shadow: 2px 0px 5px #e1e1e1;
+        z-index: 1;
+        position: relative;
+        .ant-btn{
+          margin: 25px 0 20px 20px;
+          width: 205px;
+          float: left;
+          height: 40px;
+          font-size: 15px;
+          >span{
+            margin: 0 0 0 13px;
+          }
+        }
+        .ant-menu {
+          width: 100%;
+          height: 100%;
+          .ant-menu-submenu-title{
+            font-size: 15px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 0 1px 0;
+            cursor: inherit;
+            >i{
+              display: none;
+            }
+          }
+          .ant-menu-submenu-title:hover,.ant-menu-submenu-title:active{
+            color: #333333;
+            background: none;
+          }
+          >li{
+            font-size: 13px;
+            color: #333333;
+          }
+          .ant-menu-item-active{
+            background: #e9f5ff;
+          }
+          .ant-menu-item-selected{
+            background: #cee3fd;
+            color: #267ae5;
+          }
+          ul>li:hover{
+            background: #e9f5ff;
+          }
+          ul>li{
+            padding-left:63px !important;
+          }
+          ul>li,.ant-menu-item{
+            height: 40px;
+            line-height: 40px;
+            margin: 0 0 1px 0;
+            svg{
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+      }         
+      .contBox {
+        position: absolute;
+        flex-flow: column nowrap;
+        top: 0 ;
+        left: 250px;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        .topBox{
+          flex: 0 0 auto;          
+          .titRow {
+            background: #fff;
+            position: relative;
+            h1 {
+              font-size: 20px;
+              margin: 0;
+              padding: 25px 15px 20px 20px;
+              position: relative;
+              .line{
+                width: 100%;
+                margin: 20px 0 0 0;
+                height: 1px;                
+                float: left;
+                position: relative;
+                padding: 0 0 0 62px;
+                .lin{
+                  width: 100%;
+                  height: 1px;
+                  background: #e9e9e9;
+                }
+                i{
+                  position: absolute;
+                  color: #909294;
+                  font-size: 18px;
+                  top: -10px;
+                  cursor: pointer;
+                  left:36px;
+                }
+                span{
+                  position: absolute;
+                  left: 0;
+                  font-size: 14px;
+                  color: #909294;
+                  top: -12px;
+                  cursor: pointer;
+                }
+              }
+              span{
+                float: left;
+              }
+              .ant-dropdown-link{
+                font-size: 14px;
+                font-weight: 100;
+                line-height: 22px;
+                margin: 2px 0 0 15px;
+                color: #267ae5;
+                float: left;
+              }
+              >i{
+                float: right;
+                margin: 20px 0 0 10px;
+                font-size: 12px;
+                font-weight: lighter;
+                cursor: pointer;
+              }
+              i:hover,span:hover{
+                color: #277be4;
+              }
+              .searchClose{
+                position: absolute;
+                right: 24px;
+                z-index: 1;
+                top: 30px;
+                font-size: 12px;
+                display: inline-block;
+                background: #edf7ff;
+                color: #267ae5;
+                height: 20px;
+                line-height: 20px;
+                cursor: pointer;
+              }
+              .ant-input-search{
+                float: right;
+                padding: 0;
+                .ant-input{
+                  border-radius: 3px;
+                  background: #edf7ff;
+                  height: 30px;
+                }
+              }
+            }            
+          }
+          .searchbb{
+            display: flex;
+            background: #fff;
+            width: 100%;
+            .searchbb_l{
+              flex: 0 0 auto;      
+              padding: 0 15px 0 7px;
+              font-size: 16px;
+              line-height: 30px;
+              color: #9b9b9b;   
+              >i{
+                cursor: pointer;
+              }     
+            }
+            .searchbb_r{
+              flex:1;
+              padding: 0 15px 0 0;
+            }
+            .ant-dropdown-link{
+              cursor: pointer;
+              height:30px;
+              color:#1890ff;
+              i{
+                font-size: 17px;                
+              }              
+            }
+          }
+          .searchRow {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            padding: 0 15;
+            background: #fff;
+            margin: 0 0 10px 0;
+            .juese{
+              flex: 0 0 auto;
+              margin: 0 15px 0 0;
+              height: 30px;
+              font-size: 13px;
+              line-height: 30px;
+            }
+            .tit{
+              flex: 0 0 65px;
+              font-size: 13px;
+              margin: 0 15px 0 0;
+              display: flex;
+              align-items:center;
+              justify-content:flex-end;
+              color: #000;
+            }
+            .cont{
+              flex: 1;
+              line-height:0;
+              .userTag .ant-tag{
+                margin: 5px 6px 0 0;
+              }
+              .ant-select-selection{
+                input{
+                  max-width: 230px;
+                }
+              }
+              .cpet_tag{
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin: 0;
+                font-size:12px;
+                padding:0 3px 3px 0;
+              }
+              .ant-input-group{
+                margin: 0;
+                width: auto;
+                display: inline;
+                float: left;
+                .ant-input{
+                  height: 30px;
+                  font-size: 13px;
+                }
+              }
+              .ant-calendar-picker{
+                width: 250px;
+                margin: 0;
+                .ant-calendar-picker-input{
+                  height: 30px;
+                  font-size: 13px;
+                  .ant-calendar-range-picker-separator{
+                    vertical-align: unset;
+                  }
+                }
+              }
+              .dw{
+                line-height: 30px;
+                margin: 0 0 0 10px;
+                font-size: 12px;
+              }
+            }
+            .clear_icon{
+              flex: 0 0 40px;
+              padding: 0 20px 0 0;
+              line-height: 30px;
+              cursor: pointer;
+              font-size: 15px;
+            }
+            .clear_icon:hover{
+              i{
+                color: #277be4;
+              }
+            }
+          }
+          .searchRow:last-of-type{
+            border: 0;
+          }
+          .allBtnRow{
+            display: inline-block;
+            .ant-btn{
+              margin: 0 10px 0 0;
+              font-size: 14px;
+            }
+            .ant-dropdown-link{
+              margin: 0 15px 0 0;
+            }
+            i{
+              float:right;
+              margin:12px 15px 0 0;
+              cursor:pointer
+            }
+            i:hover{
+              color: #277be4;
+            }
+          }
+          .listHeaderRow{
+            padding: 0 15px;
+            margin: 15px 0 0 0;
+            .listHeader{
+              background: #fff;
+              padding: 0 15px 15px 15px;
+              border-bottom: 1px solid #eee;
+              font-size: 13px;
+              width: 100%;
+              .ant-select-selection-selected-value{
+                font-size: 13px;
+                color: #ccc;
+              }
+              .ant-checkbox-wrapper{
+                line-height: 32px;
+                span{
+                  font-size: 13px;
+                }
+              }
+              .radioGroup{
+                border-bottom: 1px solid #e9e9e9;
+                .rad{
+                  border: 1px solid #e9e9e9;
+                  border-top-left-radius: 3px;
+                  border-top-right-radius: 3px;
+                  display: inline-block;
+                  padding: 10px 20px;
+                  font-size: 14px;
+                  margin: 0 5px 0 0;
+                  position: relative;
+                  bottom: -1px;
+                  color: #999999;
+                  background: #f6f6f6;
+                  cursor: pointer;
+                }
+                .radOne{
+                  width: 15px;
+                  margin: 0;
+                  background: none;
+                  border: 0;
+                  padding: 0;
+                }
+                .act{
+                  background: #fff;
+                  color: #000;
+                  border-bottom: 1px solid #fff;
+                }
+                .ant-dropdown-link{
+                  font-size: 14px;
+                  margin: 0 15px;
+                }
+                .ant-btn{
+                  float: right;  
+                  margin:0 15px 0 0;   
+                  svg{
+                    margin: 0 5px 0 0;
+                  }   
+                }
+              }
+              >span{
+                margin: 0 10px 0 0;
+                line-height: 32px;
+              }
+            }
+          }  
+        }
+        .bottomBox{
+          flex: 1;
+          position: relative;
+          overflow: auto;
+          margin: 0 15px 15px 15px;
+          background: #fff;
+          .dataBox{
+            padding: 40px 0 0 0;
+          }
+        }             
+      }
+    }
+}
+

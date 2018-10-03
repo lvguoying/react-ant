@@ -1,0 +1,281 @@
+ /*布局*/
+.d-flex{
+  	display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -moz-box; /* Firefox 17- */
+    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -moz-flex; /* Firefox 18+ */
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    height: 100%;
+ }
+.d-cell{flex: 1}
+.d-shrink{flex-shrink:1;}
+.d-center{display: flex; flex-flow: wrap; align-items: center; justify-content:center}
+
+.bb {
+  border-bottom: 1px solid #fafafa !important;
+}
+.f14{
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+.main-title{ 
+  padding: 10px 15px !important;
+  background: #fff;
+
+}
+
+.d-bg-gray {
+  background: #f0f2f5;
+}
+
+.d-bg-white {
+  background: #fff !important;
+}
+.d-flex-con{ 
+  display: flex;
+  flex-direction: column;
+}
+.dynamic{
+min-width: 800px;
+}
+.dynamic-filter {
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  overflow: hidden;
+  box-shadow: 0 0 5px #ccc;
+  h3 {
+    font-size: 15px;
+  }
+  .dynamic-filter-item:last-child{
+    border: 0;
+  }
+  .dynamic-filter-item {
+    width:100%;
+    display: flex;
+    padding: 0 0 10px 0;
+    padding-right: 20px;
+    .title {
+      margin-right: 10px;
+      font-weight: bold;
+      color: #000;
+      flex: 0 0 80px;
+      line-height: 30px;
+    }
+    .ct {
+      flex:1;
+      position: relative;
+      .ant-select-enabled{
+        max-width:100% !important;
+        min-width:200px !important;
+        
+      }
+      .userTag .ant-tag{
+        margin: 5px 6px 0 0;
+      }
+    }
+    @media all and (max-width: 1000px) { /* 宽度小于1000 */
+      .ct {
+        flex: 1;
+        position: relative;
+      }
+    }
+  }
+}
+.ant-select-selection--multiple .ant-select-selection__rendered>ul>li{
+  max-width:450px;
+}
+@media all and (max-width: 1000px) { /* 宽度小于1000 */
+  .dateSearch_row{
+    display: flex !important;
+    flex-direction: row;
+    padding: 0 0 10px 0;
+    padding-right: 20px;
+    align-items: center;
+    .title {
+      width: 80px;
+      margin-right: 10px;
+      font-weight: bold;
+      color: #000;
+      flex: 0 0 auto;
+    }
+    .ct {
+      flex:1;
+    }
+    @media all and (max-width: 1000px) { /* 宽度小于1000 */
+      .ct {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.dateSearch_row{
+  display: none;
+}
+
+.filter-main {
+  display: flex;
+  margin-top: 15px;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 15px 15px;
+  .filter-main-list {
+    flex: 1;
+    position: relative;
+    h3 {
+      .ico-fr {
+        float: right;
+        padding-top: 5px;
+        display: none;
+      }
+      @media all and (max-width: 1000px) { /* 宽度小于1000 */
+        .ico-fr {
+          display: block;
+        }
+      }
+    }
+    .container {
+      overflow-y: auto;
+      position: absolute;
+      left: 0;
+      padding-top:33px;
+      padding-bottom: 15px;
+      top: 43px;
+      right: 0px;
+      bottom: 0px;
+      .objectTit {
+        height: 60px;
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0px 40px 0 40px;
+        .dateNull {
+          flex: 0 0 60px;
+        }
+        .date {
+          width: 60px;
+          flex: 0 0 auto;
+          height: 60px;
+          text-align: center;
+          border-radius: 50%;
+          border: 5px solid #d0e4fd;
+
+          .max {
+            line-height: 46px;
+            color: #769cb3;
+            font-size: 13px;
+          }
+          .cen {
+            color: #759ab4;
+            font-size: 12px;
+            line-height: 16px;
+            margin: 7px 0 0 0;
+          }
+          .min {
+            color: #565656;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: bold;
+          }
+        }
+        .line {
+          flex: 1;
+          height: 1px;
+          margin: 31px 10px 0 10px;
+          border-bottom: 1px dashed #eee;
+        }
+        .objName {
+          flex: 0 0 auto;
+          color: #99999b;
+          line-height: 60px;
+          font-size: 14px;
+          font-weight: bold;
+          overflow: hidden;
+          max-width: 40%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      
+      .ct {
+        padding: 0px 140px 0px 100px;
+        >ul{
+          margin: 0;
+        }
+        li {
+          border-top: 1px solid #f2f2f2;
+          overflow: hidden;
+          padding: 20px 0;
+          .pic {
+            width: 50px;
+            height: 50px;
+            float: left;
+            img{
+              width: 50px;
+              height: 50px;
+              border-radius:50%; 
+            }
+            .user{
+              width: 50px;
+              height: 50px;
+              line-height: 50px;
+            }
+          }
+          .right-ct {
+            margin-left: 60px;
+            .name {
+              font-weight: bold;
+              .defal {
+                margin-right: 4px;
+              }
+              .d-text-green {
+                color: #1890FF;
+                margin-left: 4px;
+                margin-right: 4px;
+                cursor: pointer;
+              }
+            }
+            .time {
+              color: #ccc;
+            }
+          }
+        }
+      }
+      .ct:first-child li{
+        border-bottom: 0 none;
+      }
+    }
+  }
+  @media all and (max-width: 1000px) { /* 宽度小于1000 */
+    .calendar {
+      display: none;
+    }
+  }
+  .calendar {
+    width: 310px;
+    max-height: 400px;
+    margin-left: 15px;
+    .calendar-ct {
+      background: #fff;
+      .ant-radio-group{
+        display: none;
+      }
+      .ant-fullcalendar{
+        border: 0;        
+      }
+    }
+  }
+}
+
+.dateHide {
+  visibility: hidden;
+}
+
+.oMain{
+  li{
+    border-top:0px !important;
+  }
+}

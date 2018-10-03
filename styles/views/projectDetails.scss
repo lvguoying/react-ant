@@ -1,0 +1,264 @@
+.taskDetailsBox{
+    position: fixed;
+    z-index: 102;
+    width: 45%;
+    top: 65px;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 5px #c9c9c9;
+    border-left: 1px solid #ddd;
+    min-width: 600px;
+}
+
+.opet_projectDetails{
+    width: 100%;
+    height: 100%;
+    background: #f0f2f5;
+    position: relative;
+    min-width: 800px;
+    @media all and (max-width:1250px){     /* 宽度小于1250 */
+        .pro_search {
+          display: none !important;
+        }        
+        .pro_search_fixed{
+            position: fixed !important;
+            height: auto !important;
+            display: flex !important;
+            z-index: 1001 !important;
+            box-shadow: 2px 1px 3px #c8c6cd !important;
+            top:64px !important;
+            bottom:0 !important;
+            left:0 !important;
+        }
+        .pro_cont_top{
+            left: 0 !important;
+        }
+        .pro_cont,.pro_buts{
+            left: 15px !important;
+        }
+    }    
+    .pro_search_fixed_box{
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+    }
+    .pro_search{
+        width: 263px;
+        height: 100%;     
+        background: #fff;   
+        border-right: 1px solid #e8e8e8;
+        overflow: auto;
+        padding: 15px 25px;
+        display: flex;
+        flex-flow: column nowrap;
+        box-shadow: 2px 0px 5px #e1e1e1;
+        z-index: 1;
+        position: relative;
+        .ant-btn{
+            flex: 0 0 auto;
+            margin: 15px 0 30px 0;
+            float: left;
+            height: 40px;
+            font-size: 15px;
+        }
+        .ant-radio-group{
+            .ant-radio-button-wrapper{
+                padding: 0 10px;
+                background: #efefef;
+                border: 0;
+                color: #595959;
+                font-size: 12px;
+                line-height: 34px;
+            }
+            .ant-radio-button-wrapper-checked{
+                background: #267ae5;
+                color: #fff;
+            }
+        }
+        .pro-list{
+            flex:1;
+            overflow: auto;
+            margin:18px 0 0 0;
+            position: relative;
+            li{
+                font-size: 12px;
+                line-height: 35px;
+                cursor: pointer;
+                .pic{
+                    display: inline-block;
+                    margin-right: 5px;
+                    vertical-align: middle;
+                    width: 30px;
+                }
+            }
+            li:hover{
+                color: #72b1ff;
+            }
+            .act{
+                color: #277be4;
+                font-weight: bold;
+                
+            }
+            .act:hover{
+                color: #277be4;
+            }
+        }
+    }
+    .pro_cont_top{
+        position: absolute;
+        left: 263px;
+        top:0;
+        right: 0;
+        height: 50px;
+        background: #fff;
+        h1{
+            font-size: 17px;
+            font-weight: bold;
+            line-height: 50px;
+            margin: 0 0 0 15px;
+            position: absolute;
+            left: 0;
+            right: 250px;
+            height: 100%;
+            label{
+                display: inline-block;
+                float: left;
+                max-width: 60%;
+            }
+            span{
+                font-size: 12px;
+                font-weight: normal;
+                margin: 0 0 0 10px;
+                color: #69717b;
+                line-height: 50px;
+                float: left;
+            }   
+        }
+        .ant-radio-group{
+            margin: 9px 0 0 0;
+            float: right;
+            .ant-radio-button-wrapper{
+                font-size: 12px;
+            }
+            .ant-radio-button-wrapper-checked{
+                background: #277be4;
+                color: #fff;
+            }
+        }
+        .proSet{
+            font-size: 28px;
+            margin: 12px 15px 0 10px;
+            cursor: pointer;
+            float: right;
+        }
+        .proSet:hover{
+            color:#277be4;
+        }
+    }
+    .pro_buts{
+        position: absolute;
+        left: 275px;
+        top:65px;
+        right: 15px;
+        height: 33px;
+        button{
+            margin: 0 5px 0 0;
+        }
+        .ant-select-selection-selected-value{
+            font-size: 13px;
+            color: #ccc;
+        }
+    }
+    .pro_cont{
+        position: absolute;
+        left: 275px;
+        top:110px;
+        right: 15px;
+        bottom: 15px;
+        background: #fff;
+        padding: 15px;
+        overflow: auto;
+    }
+}
+
+.importStyle{
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 15px;
+    margin: 15px 0 0 0;
+    text-align: center;
+    max-height: 500px;
+    .p{
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+    p{
+        text-align: left;
+        font-size: 12px;
+        background: #f1f1f1;
+        padding: 6px 15px;
+        border-radius: 2px;
+        span:first-child{
+            color: #3a9d09
+        }
+        span:last-child{
+            color: #e10215
+        }
+        span{
+            font-weight: bold;
+            margin: 0 7px;
+        }
+    }
+    .rowBox{
+        display: flex;
+        text-align: left;
+        border-bottom: 1px dashed #f1f1f1;
+        padding: 10px 0;
+        i{
+            font-size: 18px;
+        }
+    }
+    .head{
+        font-weight: bold;
+    }
+    .listBox{
+        max-height: 385px;
+        overflow: auto;
+    }
+    .one{
+        flex: 1;
+    }
+    .two{
+        flex: 0 0 150px;
+        text-align: center;
+    }
+    .three{
+        flex: 0 0 125px;
+        text-align: center;
+    }
+    .four{
+        flex: 1;
+    }
+}
+
+.importBut{
+    margin: 10px 0 0 0;
+    text-align: right;
+    font-size: 13px;
+    cursor: pointer;
+    display: block;
+    i{
+        color: #4CAF50;
+        font-size: 16px;
+        margin: 0 7px 0 0;
+    }
+}
+.importBut:hover{
+    color: #000;
+}
+
+

@@ -1,0 +1,26 @@
+.dataBox{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    .icon{
+        font-size:50px;
+        font-weight:normal;
+        color:#bbb;
+        padding:10px 0;
+    }
+    .showTxt{
+        font-size:15px;
+        font-weight:bold;
+        color:#333;
+        padding:0 0 10px 0;
+    }
+    .alertTxt{
+        font-size:13px;
+        color:#999;
+        padding:0 0 60px 0;
+        .anticon{
+            margin-right:5px;
+        }
+    }
+    .button{}
+}

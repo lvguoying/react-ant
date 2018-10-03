@@ -1,0 +1,285 @@
+
+.fr{
+     float: right;
+}
+.f15{
+    font-size: 15px;
+}
+.mt5{
+    margin-top:5px;
+}
+.d-text-right{
+    text-align: right;
+}
+.ptb10{ padding-bottom: 5px; padding-top: 10px;}
+.project{
+        padding: 0;
+        background: #f0f2f5;
+        display: flex;
+        flex-direction: column;
+        min-width: 800px;
+        .project-filter{
+            background: #fff;
+            width: 100%;
+            padding: 25px 45px;
+        }
+     
+}
+.project-filter-item:last-child{
+    border: 0;
+}
+.switchRow{
+    padding: 0 0 8px 0;
+    position: relative;
+    .quxiao{
+        position: absolute;
+        top: 8px;
+        right: 41px;
+        background: #edf7ff;
+        font-size: 12px;
+        cursor: pointer;
+        color: #267ae5;
+    }
+    .quxiao:hover{
+        color: #277be4;
+    }
+    .ant-input-search .ant-input{
+        background: #edf7ff;
+    }
+}
+.choose{
+    position: relative;
+    display:flex;
+    align-items: center;
+    .chooseText{
+        width:35px;
+        cursor: pointer;
+        color: #909294;
+        font-size:14px;
+    }
+    .chooseText:hover{
+        color:#277be4;
+    }
+    >i{
+        cursor: pointer;
+        color: #909294;
+        font-size: 18px;
+        margin:0 10px 0 0;
+    }
+    >i:hover{
+        color: #277be4;
+    }
+    .line{
+        width:100%;
+        height:1px;
+        background:#e9e9e9;
+    }
+}
+.project-filter-item {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 0 0;
+    .title {
+        width: 100px;
+        padding: 0 15px 3px 0;
+        flex: 0 0 auto;
+        color: #5d5d5d;
+    }
+    .ct {
+      flex:1;
+      .ant-tag{
+          border:1px solid;
+          max-width: 100px;
+          float: left;
+          margin: 0 10px 3px 0;
+      }
+    }
+    @media all and (max-width: 1000px) { /* 宽度小于1000 */
+      .ct {
+        flex: 1;
+      }
+    }
+}
+.project-main {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: auto;
+    position: relative;
+    overflow-x: hidden;
+    min-width: 800px;
+    .project-main-ct{
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        bottom: 15px;
+        right: 0px;
+        overflow: auto;
+    }
+}
+.nullView{
+    height: 100%;
+    padding: 0 15px 0 0;
+    .dataBox{
+        background: #fff;
+        height: 100%;
+        padding: 40px 0 0 0;
+    }
+}
+.project-card{
+    display: flex;
+    flex-direction: row;
+    flex-flow:wrap;
+    .ant-progress-circle-path{
+        stroke:#52c41a;
+    }
+    .ant-progress-status-success .ant-progress-circle-path{
+        stroke:#1890ff;
+    }
+    .ant-progress-circle.ant-progress-status-success .ant-progress-text{
+        color:#1890ff;
+    }
+    .card{
+        padding-right: 15px;
+        width: 20%;
+        min-width: 20%;
+        cursor: pointer;
+        .item{
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ccc;
+            margin: 0 0 15px 0;
+            height: 198px;
+            .title{
+                height: 30px;
+                display: flex;
+                svg{
+                    flex: 0 0 auto;
+                }
+                .name{
+                    flex: 1;
+                    color: #181818;
+                    font-weight: bold;
+                    font-size: 14px;
+                    padding: 0 0 0 10px;
+                    line-height: 30px;
+                }
+            }  
+            .labels{
+                padding: 0 0 5px 40px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                max-width: 260px;
+                min-width: 200px;
+                .nullTag{
+                    color: #a0a0a0;
+                    border: 1px solid #f0f0f0;
+                    background: #f8f8f8;
+                }
+                .ant-tag{
+                    max-width: 75px;
+                    border:none;
+                }
+            } 
+            .cont{
+                display: flex;
+                padding: 10px 0 0 0;
+                .ant-progress{
+                    flex: 0 0 auto;
+                }
+                .iBox{
+                    flex: 0 0 40px;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                >ul{
+                    flex:1;
+                    margin: 0;
+                    li{
+                        color: #959595;
+                        text-align: right;
+                        span{
+                            display: inline-block;
+                            width: 50px;
+                            text-align: left;
+                        }
+                        label{
+                            width: 48px;
+                            text-align: left;
+                            display: inline-block;
+                        }
+                    }
+                }
+                i{
+                    cursor: pointer;
+                    font-size: 22px;
+                }
+                i:hover{
+                    color: #81b8fe;
+                }
+            }  
+        }
+       
+    }
+    
+    @media (min-width: 1250px) and (max-width: 1400px) { 
+        .card {
+           width: 25%;           
+        }        
+    }
+    @media (min-width: 850px) and (max-width: 1250px) { 
+        .card {
+           width: 33.333%;           
+        }        
+    }
+    @media all and (max-width: 850px) { 
+        .card {
+           width: 50%;           
+        }        
+    }    
+    
+}
+.card-add{
+    .item{
+        text-align: center;
+        border: 1px dashed #ddd !important;
+        font-size: 14px;
+        color: #9599a2;
+        height: 170px;
+        box-shadow: none !important;
+        i{
+            font-size: 30px;
+            color: #999999;
+            margin: 54px 0 10px 0;
+        }
+    }
+}
+
+.ico-attention{
+    font-size: 18px;
+    cursor: pointer;
+}
+.ico-attention.cur{
+    font-size: 18px;
+    color: #fbbe07;
+    cursor: pointer;
+}
+
+.p-name{
+     height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.pro-cic{
+    color: #000;
+    span{ padding: 0px !important;}
+    .ant-progress-circle-path{
+        stroke:#52c41a;
+    }
+}

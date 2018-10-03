@@ -1,0 +1,27 @@
+.errorBox{
+    display:flex;
+    .icon_box{
+        flex:1;
+        font-size:200px;
+        i{
+            width:100%;
+        }
+    }
+    .right_box{
+        flex:1;
+        padding:40px;
+        .errorTxt{
+            font-size:50px;
+            color:#666;
+            padding:10px 0 10px 20px;
+        }
+        .alertTxt{
+            font-size:16px;
+            color:#999;
+            padding:10px 0 10px 20px;
+        }
+        .button{
+            padding-left:20px;
+        }
+    }
+}
